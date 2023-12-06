@@ -6,31 +6,11 @@ const Login = (props) => {
     let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-    const response = await fetch("http://localhost:8000/api/auth/login", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // Add other headers if needed
-      },
-      // Add body if you are sending data in the request
-      // body: JSON.stringify({ key: 'value' }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    // Handle the response here, e.g., parse JSON
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error('Error during fetch:', error);
-  }
-};
-
+        e.preventDefault();
+        const response = await fetch("http://localhost:8000/api/auth/login", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({ email: credentials.email, password: credentials.password })
         });
