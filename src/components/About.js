@@ -3,11 +3,11 @@ import React from 'react'
 const About = () => {
     return (
         <div>
-            Design by Nishar Momin
+            Design by Brahamdev sah
             <br />
-            9814462981
+            9812053957
             <br />
-            nisharali090@gmail.com
+            brahamdevsah1234@gmail.com
         </div>
     )
 }
